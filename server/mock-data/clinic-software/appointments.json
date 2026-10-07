@@ -1,0 +1,14 @@
+[
+  { "externalId": "MOCK-C-1", "patientExternalId": "MOCK-P-1001", "professionalExternalId": "MOCK-D-1", "branchExternalId": "MOCK-S-1", "dayOffset": -20, "time": "09:00", "durationMin": 45, "status": "Atendido" },
+  { "externalId": "MOCK-C-2", "patientExternalId": "MOCK-P-1002", "professionalExternalId": "MOCK-D-2", "branchExternalId": "MOCK-S-1", "dayOffset": -14, "time": "10:30", "durationMin": 30, "status": "Atendido" },
+  { "externalId": "MOCK-C-3", "patientExternalId": "MOCK-P-1003", "professionalExternalId": "MOCK-D-3", "branchExternalId": "MOCK-S-2", "dayOffset": -7, "time": "11:00", "durationMin": 30, "status": "No asiste" },
+  { "externalId": "MOCK-C-4", "patientExternalId": "MOCK-P-1004", "professionalExternalId": "MOCK-D-1", "branchExternalId": "MOCK-S-1", "dayOffset": -3, "time": "15:00", "durationMin": 60, "status": "Atendido" },
+  { "externalId": "MOCK-C-5", "patientExternalId": "MOCK-P-1005", "professionalExternalId": "MOCK-D-2", "branchExternalId": "MOCK-S-2", "dayOffset": -1, "time": "16:30", "durationMin": 30, "status": "Atendido" },
+  { "externalId": "MOCK-C-6", "patientExternalId": "MOCK-P-1006", "professionalExternalId": "MOCK-D-3", "branchExternalId": "MOCK-S-1", "dayOffset": 0, "time": "09:30", "durationMin": 30, "status": "Confirmado" },
+  { "externalId": "MOCK-C-7", "patientExternalId": "MOCK-P-1007", "professionalExternalId": "MOCK-D-1", "branchExternalId": "MOCK-S-1", "dayOffset": 0, "time": "12:00", "durationMin": 45, "status": "Confirmado" },
+  { "externalId": "MOCK-C-8", "patientExternalId": "MOCK-P-1008", "professionalExternalId": "MOCK-D-2", "branchExternalId": "MOCK-S-2", "dayOffset": 1, "time": "10:00", "durationMin": 30, "status": "No confirmado" },
+  { "externalId": "MOCK-C-9", "patientExternalId": "MOCK-P-1009", "professionalExternalId": "MOCK-D-1", "branchExternalId": "MOCK-S-1", "dayOffset": 2, "time": "17:00", "durationMin": 60, "status": "No confirmado" },
+  { "externalId": "MOCK-C-10", "patientExternalId": "MOCK-P-1001", "professionalExternalId": "MOCK-D-1", "branchExternalId": "MOCK-S-1", "dayOffset": 5, "time": "09:00", "durationMin": 45, "status": "No confirmado" },
+  { "externalId": "MOCK-C-11", "patientExternalId": "MOCK-P-1010", "professionalExternalId": "MOCK-D-3", "branchExternalId": "MOCK-S-2", "dayOffset": 9, "time": "11:30", "durationMin": 30, "status": "No confirmado" },
+  { "externalId": "MOCK-C-12", "patientExternalId": "MOCK-P-1002", "professionalExternalId": "MOCK-D-2", "branchExternalId": "MOCK-S-1", "dayOffset": 16, "time": "10:30", "durationMin": 30, "status": "No confirmado" }
+]

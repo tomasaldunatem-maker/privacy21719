@@ -1,0 +1,12 @@
+[
+  { "externalId": "MOCK-P-1001", "firstName": "Camila", "lastName": "Muñoz Prueba", "rut": "11.111.111-1", "email": "camila.munoz@example.com", "phone": "+56 9 0000 0001" },
+  { "externalId": "MOCK-P-1002", "firstName": "Martín", "lastName": "Fuentes Prueba", "rut": "22.222.222-2", "email": "martin.fuentes@example.com", "phone": "+56 9 0000 0002" },
+  { "externalId": "MOCK-P-1003", "firstName": "Josefa", "lastName": "Rojas Prueba", "rut": "33.333.333-3", "email": "josefa.rojas@example.com", "phone": "+56 9 0000 0003" },
+  { "externalId": "MOCK-P-1004", "firstName": "Pedro", "lastName": "Soto Prueba", "rut": "44.444.444-4", "email": "pedro.soto@example.com", "phone": "+56 9 0000 0004" },
+  { "externalId": "MOCK-P-1005", "firstName": "Valentina", "lastName": "Díaz Prueba", "rut": "55.555.555-5", "email": "valentina.diaz@example.com", "phone": "+56 9 0000 0005" },
+  { "externalId": "MOCK-P-1006", "firstName": "Tomás", "lastName": "Vega Prueba", "rut": "66.666.666-6", "email": "tomas.vega@example.com", "phone": "+56 9 0000 0006" },
+  { "externalId": "MOCK-P-1007", "firstName": "Isidora", "lastName": "Contreras Prueba", "rut": "77.777.777-7", "email": "isidora.contreras@example.com", "phone": "+56 9 0000 0007" },
+  { "externalId": "MOCK-P-1008", "firstName": "Benjamín", "lastName": "Silva Prueba", "rut": "88.888.888-8", "email": "benjamin.silva@example.com", "phone": "+56 9 0000 0008" },
+  { "externalId": "MOCK-P-1009", "firstName": "Florencia", "lastName": "Morales Prueba", "rut": "99.999.999-9", "email": "florencia.morales@example.com", "phone": "+56 9 0000 0009" },
+  { "externalId": "MOCK-P-1010", "firstName": "Agustín", "lastName": "Reyes Prueba", "rut": null, "email": "agustin.reyes@example.com", "phone": "+56 9 0000 0010" }
+]

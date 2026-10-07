@@ -1,0 +1,42 @@
+# Prueba completa contra la aplicación desplegada (URL pública).
+# Ejecutar: Actions → "Prueba de la URL pública" → Run workflow. Requiere el secreto DEMO_PASSWORD.
+name: Prueba de la URL pública
+on:
+  workflow_dispatch:
+    inputs:
+      base_url:
+        description: URL pública de la aplicación en Render
+        required: true
+        default: https://privacy21719.onrender.com
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Instalar Playwright
+        working-directory: e2e
+        run: npm install --no-save playwright@1 && npx playwright install --with-deps chromium
+      - name: Esperar a que el servicio despierte
+        run: |
+          for i in $(seq 1 40); do
+            code=$(curl -s -o /dev/null -w "%{http_code}" "${{ inputs.base_url }}/api/health" || true)
+            echo "intento $i: $code"; [ "$code" = "200" ] && exit 0; sleep 10
+          done; exit 1
+      - name: Ejecutar prueba
+        working-directory: e2e
+        env:
+          BASE_URL: ${{ inputs.base_url }}
+          DEMO_PASSWORD: ${{ secrets.DEMO_PASSWORD }}
+        run: node smoke.mjs | tee result.txt
+      - name: Resumen
+        if: always()
+        run: |
+          { echo "## Resultado de la prueba en ${{ inputs.base_url }}"; echo '```'; grep -E "^(OK|FAIL)|TODO OK|FALLAS" e2e/result.txt || cat e2e/result.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+      - name: Capturas
+        if: always()
+        uses: actions/upload-artifact@v4
+        with: { name: capturas, path: e2e/shots }

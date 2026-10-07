@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+uploads/
+*.log
+e2e/shots/
+e2e/acta.txt
+e2e/result.txt

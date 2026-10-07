@@ -1,0 +1,4 @@
+[
+  { "externalId": "MOCK-S-1", "name": "Sucursal Providencia (ficticia)", "address": "Av. Ejemplo 1234, Providencia" },
+  { "externalId": "MOCK-S-2", "name": "Sucursal Ñuñoa (ficticia)", "address": "Calle Prueba 567, Ñuñoa" }
+]

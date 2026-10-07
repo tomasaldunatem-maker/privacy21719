@@ -1,0 +1,6 @@
+[
+  { "externalId": "MOCK-D-1", "name": "Dra. Andrea Pérez (ficticia)", "specialty": "Rehabilitación oral", "active": true },
+  { "externalId": "MOCK-D-2", "name": "Dr. Ignacio Lagos (ficticio)", "specialty": "Ortodoncia", "active": true },
+  { "externalId": "MOCK-D-3", "name": "Dra. Paula Riquelme (ficticia)", "specialty": "Odontopediatría", "active": true },
+  { "externalId": "MOCK-D-4", "name": "Dr. Felipe Araya (ficticio)", "specialty": "Endodoncia", "active": false }
+]

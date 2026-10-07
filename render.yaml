@@ -1,0 +1,38 @@
+# Render Blueprint: crea la base de datos PostgreSQL y el servicio web con HTTPS.
+# Uso: Render Dashboard → New → Blueprint → seleccionar este repositorio → Apply.
+databases:
+  - name: privacy21719-db
+    plan: free            # Gratis para demostración. Para uso real cambie a un plan pagado (respaldos y sin vencimiento).
+    region: virginia
+    databaseName: privacy21719
+    user: privacy21719
+    ipAllowList: []       # Solo accesible desde los servicios de Render (sin acceso público)
+
+services:
+  - type: web
+    name: privacy21719
+    runtime: docker
+    plan: free            # El plan gratuito se suspende tras 15 min sin uso (el primer acceso tarda ~1 min).
+    region: virginia
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: privacy21719-db
+          property: connectionString
+      - key: INTEGRATION_ENCRYPTION_KEY
+        generateValue: true   # Render genera un secreto aleatorio; cifra los tokens de Dentalink/Medilink
+      - key: SEED_DEMO
+        value: "true"         # Crea la clínica de demostración (datos ficticios) si no existe
+      - key: DEMO_PASSWORD
+        sync: false           # Render la pide al crear el Blueprint
+      - key: SESSION_TTL_HOURS
+        value: "12"
+      - key: CLINIC_SOFTWARE_PROVIDER
+        value: mock
+      # APP_ORIGIN se toma automáticamente de RENDER_EXTERNAL_URL.
+      # Si usa un dominio propio, defina APP_ORIGIN=https://su-dominio.cl
