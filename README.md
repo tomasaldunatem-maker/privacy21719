@@ -109,6 +109,21 @@ demostración una sola vez. Los archivos de evidencia se guardan en PostgreSQL, 
 **Prueba de la URL pública:** en GitHub → Actions → *Prueba de la URL pública* → Run workflow, indicando la URL.
 Requiere el secreto de repositorio `DEMO_PASSWORD`. El resultado aparece en el resumen de la ejecución y las capturas como archivo descargable.
 
+### Crear la clínica real en Render (sin consola)
+
+En Render → servicio → **Environment**, agregue estas variables y guarde (Render reinicia el servicio):
+
+| Variable | Ejemplo |
+|---|---|
+| `BOOTSTRAP_CLINIC_NAME` | Clínica Oral Blank |
+| `BOOTSTRAP_CLINIC_SLUG` | oralblank |
+| `BOOTSTRAP_ADMIN_NAME` | Administración Oral Blank |
+| `BOOTSTRAP_ADMIN_EMAIL` | administracion@oralblank.cl |
+| `BOOTSTRAP_ADMIN_PASSWORD` | contraseña temporal de 12+ caracteres con letras y números |
+
+Al iniciar se crea la clínica y su administrador (solo si no existen). Al primer ingreso se exige cambiar la
+contraseña. Luego puede borrar `BOOTSTRAP_ADMIN_PASSWORD`.
+
 ### Otras plataformas
 
 ```bash

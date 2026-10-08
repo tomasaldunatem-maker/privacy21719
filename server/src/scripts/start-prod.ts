@@ -15,4 +15,5 @@ const run = (rel: string, args: string[] = []) => {
 run('../db/migrate.js');
 run('../db/seed/catalog.js');
 if (process.env.SEED_DEMO === 'true') run('../db/seed/demo.js', ['--if-missing']);
+run('./bootstrap-clinic.js');
 await import('../index.js');
